@@ -7,7 +7,7 @@ export const InputContainer = styled.div`
 
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     font-size: 24px;
     font-family: Fira Code, sans-serif;
@@ -23,5 +23,6 @@ export const InputContainer = styled.div`
         text-align: right;
         padding: 0 10px;
         color: white;
+        border-radius: 5px;
     }
 `
