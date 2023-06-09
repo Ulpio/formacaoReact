@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
     padding: 20px;
-    border: 1px solid #FAFAFA;
+    border: 1px solid #CCDDCD;
     background-color: #FFA500;
     color: white;
     border-radius: 5px;
@@ -14,5 +14,4 @@ export const ButtonContainer = styled.button`
     &:hover {
         opacity: 0.825;
     }
-    border-radius: 1rem;
 `

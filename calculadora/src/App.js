@@ -28,13 +28,13 @@ const App= () => {
   const handleDifNumbers = () =>{
     setFirstNumber(currentNumber);
     setCurrentNumber('0');
-    setOperation('dif')
+    setOperation('-')
   }
 
   const handleMultNumbers = () =>{
     setFirstNumber(currentNumber);
     setCurrentNumber('0');
-    setOperation('x')
+    setOperation('*')
   }
 
   const handleDivNumbers = () =>{
@@ -44,7 +44,7 @@ const App= () => {
   }
 
   const handleDel = () =>{
-    setCurrentNumber(prev => prev.slice(0,prev.length-1))
+    setCurrentNumber(prev => prev.slice(0,-1)) 
   }
 
   const InvertNumber = () =>{
@@ -63,7 +63,7 @@ const App= () => {
       setCurrentNumber(String(sum));
       setOperation('')
     }
-    else if(operation === 'x'){
+    else if(operation === '*'){
       const sum = Number(firstNumber)*Number(currentNumber);
       setCurrentNumber(String(sum));
       setOperation('')
@@ -94,13 +94,13 @@ const App= () => {
           <Button label="7" onClick={()=>handleAddNumber('7')}/>
           <Button label="8" onClick={()=>handleAddNumber('8')}/>
           <Button label="9" onClick={()=>handleAddNumber('9')}/>
-          <Button label="x" onClick={()=>handleMultNumbers}/>
+          <Button label="x" onClick={handleMultNumbers}/>
         </Row>
         <Row>
           <Button label="4" onClick={()=>handleAddNumber('4')}/>
           <Button label="5" onClick={()=>handleAddNumber('5')}/>
           <Button label="6" onClick={()=>handleAddNumber('6')}/>
-          <Button label="-" onClick={()=>handleDifNumbers}/>
+          <Button label="-" onClick={handleDifNumbers}/>
         </Row>
         <Row>
           <Button label="1" onClick={()=>handleAddNumber('1')}/>
